@@ -128,10 +128,19 @@ class Hooks {
 
 		$dbType = $updater->getDB()->getType();
 		// For non-MySQL/MariaDB/SQLite DBMSes, use the appropriately named file
-		if (!in_array($dbType, array('mysql', 'sqlite'))) {
-			throw new \Exception('Database type not currently supported');
-		} else {
-			$filename = 'mysql.sql';
+		switch ($dbType)
+		{
+			case 'mysql':
+				$filename = 'mysql.sql';
+				break;
+			case 'sqlite':
+				$filename = 'mysql.sql';
+				break;
+			case 'mssql':
+				$filename = 'mssql.sql';
+				break;
+			default:
+				throw new \Exception('Database type not currently supported');
 		}
 
 		$updater->addExtensionTable('FlowThread', "{$dir}/{$filename}");
