@@ -3,3 +3,10 @@
 	margin-right: auto;
 	max-width: 55.8em;
 }
+
+@media screen and (max-width: 720px) {
+    .comment-container-top, .comment-container, .comment-paginator, .comment-replybox {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
