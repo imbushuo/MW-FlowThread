@@ -79,10 +79,12 @@
 				"moment",
 				"mediawiki.user"
 			],
-			"scripts":[
-				"assets/common.js",
-				"assets/flowthread.js"
-			],
+      "scripts": [
+        "assets/behaviorswitch.desktop.js",
+        "assets/mobilemapping.js",
+        "assets/common.js",
+        "assets/flowthread.js"
+      ],
 			"styles":[
 				"assets/common.css",
 				"assets/flowthread.css"
@@ -108,10 +110,12 @@
 				"moment",
 				"mediawiki.user"
 			],
-			"scripts":[
-				"assets/common.js",
-				"assets/flowthread.js"
-			],
+      "scripts": [
+        "assets/behaviorswitch.mobile.js",
+        "assets/mobilemapping.js",
+        "assets/common.js",
+        "assets/flowthread.js"
+      ],
 			"styles":[
 				"assets/common.css",
 				"assets/mobile.css",
@@ -138,10 +142,12 @@
 				"moment",
 				"mediawiki.user"
 			],
-			"scripts": [
-				"assets/common.js",
-				"assets/manage.js"
-			],
+      "scripts": [
+        "assets/behaviorswitch.desktop.js",
+        "assets/mobilemapping.js",
+        "assets/common.js",
+        "assets/manage.js"
+      ],
 			"styles": [
 				"assets/common.css",
 				"assets/manage.css"

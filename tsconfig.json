@@ -1,0 +1,11 @@
+{
+  "compileOnSave": true,
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs"
+  },
+  "include": [ "assets/*.ts" ]
+}
