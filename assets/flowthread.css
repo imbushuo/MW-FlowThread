@@ -81,14 +81,6 @@
     opacity: 1.0;
 }
 
-.comment-post .comment-report, .comment-post .comment-delete {
-	display: none;
-}
-
-.comment-post:hover .comment-report, .comment-report[reported], .comment-post:hover .comment-delete {
-	display: initial;
-}
-
 .comment-thread .comment-replybox:not(:first-child) {
 	margin-left: 50px;
 }

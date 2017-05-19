@@ -87,7 +87,8 @@
       ],
 			"styles":[
 				"assets/common.css",
-				"assets/flowthread.css"
+        "assets/flowthread.css",
+        "assets/flowthread.desktop.css"
 			],
 			"messages": [
 				"flowthread-ui-reply",
