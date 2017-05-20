@@ -5,8 +5,33 @@
 }
 
 @media screen and (max-width: 720px) {
+
     .comment-container-top, .comment-container, .comment-paginator, .comment-replybox {
         margin-left: 10px;
         margin-right: 10px;
     }
+
+    .comment-avatar img {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+    }
+
+    .comment-thread > div:not(:first-child) .comment-avatar img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .comment-body {
+        padding-left: 40px;
+    }
+
+    .comment-thread .comment-thread {
+        margin-left: 20px;
+    }
+
+    .comment-thread > div:not(:first-child) .comment-body {
+        padding-left: 30px;
+    }
+
 }

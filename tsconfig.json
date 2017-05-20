@@ -5,7 +5,7 @@
   },
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs"
+    "module": "amd"
   },
-  "include": [ "assets/*.ts" ]
+  "include": [ "assets/*.ts", "refs/mediawiki.d.ts" ]
 }
