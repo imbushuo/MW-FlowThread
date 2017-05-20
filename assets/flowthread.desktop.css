@@ -5,3 +5,21 @@
 .comment-post:hover .comment-report, .comment-report[reported], .comment-post:hover .comment-delete {
     display: initial;
 }
+
+.comment-submit:hover {
+    box-shadow: 0px 0px 0px white inset, 0 5px 11px 0 rgba(0,0,0,0.18);
+}
+
+.comment-submit:active {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset, 0px 0px 0px white;
+}
+
+.flowthread-btn:hover {
+    border: 1px solid #CCC;
+    box-shadow: 0px 0px 0px white inset,0 5px 11px 0 rgba(0,0,0,0.18);
+}
+
+.flowthread-btn.on:hover {
+    border: 1px solid #CCC;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset, 0 5px 11px 0 rgba(0,0,0,0.18);
+}
