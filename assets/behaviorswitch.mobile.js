@@ -11,9 +11,8 @@ window.flowThreadBehavior = {
     + '<div class="comment-body">'
     + '<div class="comment-user"></div>'
     + '<div class="comment-text"></div>'
-    + '<div class="comment-footer">'
-    + '<div class="comment-footer-mobile-buttons">'
-    + '<span class="comment-time"></span>'
+    + '<div class="comment-footer"><span class="comment-time"></span></div>'
+    + '<div class="comment-footer-mobile-buttons"></div>'
     + '</div>'
     + '</div></div></div>'
 };
