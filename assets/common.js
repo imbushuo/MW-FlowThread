@@ -1,3 +1,5 @@
+/// <reference path="../node_modules/@types/jquery/index.d.ts" />
+
 var config = mw.config.get('wgFlowThreadConfig');
 
 /* Get avatar by user name */
@@ -20,20 +22,30 @@ function getTimeString(time) {
   }
 }
 
-function Thread() {
-  var template = '<div class="comment-thread"><div class="comment-post">'
-    + '<div class="comment-avatar">'
-    + '<img src=""></img>'
-    + '</div>'
-    + '<div class="comment-body">'
-    + '<div class="comment-user"></div>'
-    + '<div class="comment-text"></div>'
-    + '<div class="comment-footer">'
-    + '<span class="comment-time"></span>'
-    + '</div>'
-    + '</div></div></div>';
+/* Get current candidate template */
+function getCandidateTemplate() {
+    var defaultTemplate = '<div class="comment-thread"><div class="comment-post">'
+        + '<div class="comment-avatar">'
+        + '<img src=""></img>'
+        + '</div>'
+        + '<div class="comment-body">'
+        + '<div class="comment-user"></div>'
+        + '<div class="comment-text"></div>'
+        + '<div class="comment-footer">'
+        + '<span class="comment-time"></span>'
+        + '</div>'
+        + '</div></div></div>';
 
-  var object = $(template);
+    return (window && window.template) ? window.template : defaultTemplate;
+}
+
+/* Get current button container class */
+function getCandidateButtonClass() {
+    return (window && window.buttonClassId) ? window.buttonClassId : ".comment-footer";
+}
+
+function Thread() {
+  var object = $(getCandidateTemplate());
 
   this.post = null;
   this.object = object;
@@ -70,7 +82,7 @@ Thread.prototype.addButton = function(type, text, listener) {
     .addClass('comment-' + type)
     .text(text)
     .click(listener)
-    .appendTo(this.object.find('.comment-footer'));
+    .appendTo(this.object.find(getCandidateButtonClass()));
 }
 
 Thread.prototype.appendChild = function(thread) {

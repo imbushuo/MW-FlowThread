@@ -42,8 +42,12 @@
     color: #999;
 }
 
+.comment-time {
+    margin-right: 5px;
+}
+
 .comment-reply, .comment-like, .comment-report, .comment-delete {
-    margin-left: 5px;
+    margin-right: 5px;
     cursor: pointer;
     transition: color 0.15s linear 0s;
 }

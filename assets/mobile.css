@@ -4,6 +4,12 @@
 	max-width: 55.8em;
 }
 
+.comment-footer-mobile-buttons {
+    font-size: 12px;
+    margin-right: 8px;
+    color: #999;
+}
+
 @media screen and (max-width: 720px) {
 
     .comment-container-top, .comment-container, .comment-paginator, .comment-replybox {
@@ -27,7 +33,7 @@
     }
 
     .comment-thread .comment-thread {
-        margin-left: 20px !important;
+        margin-left: 10px !important;
     }
 
     .comment-thread > div:not(:first-child) .comment-body {
