@@ -7,31 +7,31 @@
 @media screen and (max-width: 720px) {
 
     .comment-container-top, .comment-container, .comment-paginator, .comment-replybox {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 10px !important;
+        margin-right: 10px !important;
     }
 
     .comment-avatar img {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 100% !important;
     }
 
     .comment-thread > div:not(:first-child) .comment-avatar img {
-        width: 20px;
-        height: 20px;
+        width: 20px !important;
+        height: 20px !important;
     }
 
     .comment-body {
-        padding-left: 40px;
+        padding-left: 40px !important;
     }
 
     .comment-thread .comment-thread {
-        margin-left: 20px;
+        margin-left: 20px !important;
     }
 
     .comment-thread > div:not(:first-child) .comment-body {
-        padding-left: 30px;
+        padding-left: 30px !important;
     }
 
 }
