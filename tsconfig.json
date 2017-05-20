@@ -1,0 +1,12 @@
+{
+  "compileOnSave": true,
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compilerOptions": {
+    "target": "es5",
+    "module": "amd",
+    "allowJs": false
+  },
+  "include": [ "assets", "refs/mediawiki.d.ts" ]
+}

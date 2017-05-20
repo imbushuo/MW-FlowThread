@@ -1,3 +1,6 @@
+/// <reference path="../refs/mediawiki.d.ts" />
+/// <reference path="mobilemapping.ts" />
+
 var canpost = mw.config.exists('canpost');
 var ownpage = mw.config.exists('commentadmin') || mw.config.get('wgNamespaceNumber') === 2 && mw.config.get('wgTitle').replace('/$', '') === mw.user.id();
 
@@ -101,12 +104,22 @@ function reloadComments(offset) {
       $('.comment-container-top').removeAttr('disabled').append(obj.object);
     });
     canpost = canpostbak;
+    // Behavior switch: Will determine reply behavior depends on pre-configuration (see behaviorswitch config)
+    var replyBehavior = window.flowThreadBehavior && window.flowThreadBehavior.aggressiveCollapse;
+    var replyMapping = new MobileCommentParentMapping(true);
     data.flowthread.posts.forEach(function(item) {
       var obj = createThread(item);
       if (item.parentid === '') {
-        $('.comment-container').append(obj.object);
+          $('.comment-container').append(obj.object);
+          replyMapping.pushMapping(item.id, '');
       } else {
-        Thread.fromId(item.parentid).appendChild(obj);
+        var parentid = item.parentid;
+        if (replyBehavior) {
+            var rootParentId = replyMapping.getMapping(item.parentid);
+            if (rootParentId) parentid = rootParentId;
+        }
+        Thread.fromId(parentid).appendChild(obj);
+        replyMapping.pushMapping(item.id, item.parentid);
       }
     });
     pager.current = Math.floor(offset / 10);
