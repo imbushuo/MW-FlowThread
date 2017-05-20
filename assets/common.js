@@ -36,12 +36,12 @@ function getCandidateTemplate() {
         + '</div>'
         + '</div></div></div>';
 
-    return (window && window.template) ? window.template : defaultTemplate;
+    return (window && window.flowThreadBehavior) ? window.flowThreadBehavior.template : defaultTemplate;
 }
 
 /* Get current button container class */
 function getCandidateButtonClass() {
-    return (window && window.buttonClassId) ? window.buttonClassId : ".comment-footer";
+    return (window && window.flowThreadBehavior) ? window.flowThreadBehavior.buttonClassId : ".comment-footer";
 }
 
 function Thread() {
